@@ -38,7 +38,7 @@ A cute cat-themed slot machine game built with Electron. Spin the reels, match c
 
 ```bash
 # Clone the repo
-git clone 
+git clone https://github.com/eilieva131/kitty-slot.git
 
 # Install dependencies
 npm install
