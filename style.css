@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 550px;
+    width: auto;
+    overflow: hidden;
+    background-image: url("assets/others/background.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.drag-bar {
+    -webkit-app-region: drag;
+    height: 30px;
+    width: 100%;
+    z-index: 12;
+}
+
+.window-controls {
+    position: absolute;
+    top: 8px;
+    right: 13px;
+    display: flex;
+    gap: 10px;
+    z-index: 13;
+}
+
+.window-btn {
+    -webkit-app-region: no-drag;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    cursor: pointer;
+    pointer-events: auto;
+    image-rendering: pixelated;
+}
+
+/* Coin display */
+.coin-wrapper {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 50px;
+    left: 20px;
+    z-index: 7;
+}
+
+.coin {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    image-rendering: pixelated;
+}
+
+#coinDisplay {
+    font-size: 26px;
+    color: #522735;
+    font-family: 'Fredoka', 'Comic Sans MS', cursive;
+    font-weight: bold;
+}
+
+/* Machine base */
+.machine {
+    position: absolute;
+    top: 132px;
+    left: 20%;
+    z-index: 3;
+}
+
+.machine img {
+    width: 250px;
+    height: auto;
+    image-rendering: pixelated;
+}
+
+/* Slot machine area */
+.white-box {
+    position: absolute;
+    top: 250px;
+    left: 30%;
+    width: 170px;
+    height: 140px;
+    background-color: white;
+    z-index: 1;
+}
+
+.slot-container {
+    position: absolute;
+    top: 300px;
+    left: 32%;
+    display: flex;
+    z-index: 2;
+}
+
+.slot {
+    width: 50px;
+    height: 50px;
+    image-rendering: pixelated;
+}
+
+/* Machine expression */
+.machine-expression {
+    position: absolute;
+    top: 205px;
+    left: 37%;
+    display: flex;
+    z-index: 4;
+}
+
+.machine-expression img {
+    width: 110px;
+    height: auto;
+    image-rendering: pixelated;
+}
+
+/* Spin button */
+#spinButton {
+    position: absolute;
+    bottom: 160px;
+    left: 75%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 5;
+}
+
+#buttonImage {
+    width: 45px;
+    height: auto;
+    image-rendering: pixelated;
+}
+
+/* Win message popup */
+#winMessage {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid #522735;
+    padding: 12px 24px;
+    font-size: 18px;
+    color: #522735;
+    font-weight: bold;
+    font-family: 'Fredoka', 'Comic Sans MS', cursive;
+    border-radius: 12px;
+    display: none;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    z-index: 11;
+}
+
+/* Pixel art rendering */
+img {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}

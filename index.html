@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kitty Gamble</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+    <!-- Draggable window bar -->
+    <div class="drag-bar"></div>
+
+    <!-- Window controls -->
+    <div class="window-controls">
+        <img src="assets/others/minimize.png" 
+             id="minimizeBtn" 
+             class="window-btn" 
+             alt="Minimize">
+        <img src="assets/others/close.png" 
+             id="closeBtn" 
+             class="window-btn" 
+             alt="Close">
+    </div>
+
+    <!-- Coin display -->
+    <div class="coin-wrapper">
+        <img class="coin" src="assets/others/coin.PNG" alt="Coin">
+        <div id="coinDisplay">
+            <span id="coinAmount">100</span>
+        </div>
+    </div>
+
+    <!-- Main game area -->
+    <div class="machine">
+        <img src="assets/others/machine.png" alt="Kitty Gamble Machine">
+    </div>
+
+    <!-- White background for slots -->
+    <div class="white-box"></div>
+
+    <!-- Slot machine reels -->
+    <div class="slot-container">
+        <img class="slot" id="slot1" src="assets/cats/grayCat.png" alt="Slot 1">
+        <img class="slot" id="slot2" src="assets/cats/orangeCat.png" alt="Slot 2">
+        <img class="slot" id="slot3" src="assets/cats/rainbowCat.png" alt="Slot 3">
+    </div>
+
+    <!-- Machine expression face -->
+    <div class="machine-expression">
+        <img src="assets/expressions/idle.PNG" id="machine-face" alt="Machine Expression">
+    </div>
+
+    <!-- Spin button -->
+    <button id="spinButton">
+        <img src="assets/others/buttonOff.png" id="buttonImage" alt="Spin">
+    </button>
+
+    <!-- Win message popup -->
+    <div id="winMessage"></div>
+
+    <!-- Scripts -->
+    <script src="gamble.js"></script>
+    <script>
+        const { ipcRenderer } = require('electron');
+
+        // Window control event listeners
+        document.getElementById('minimizeBtn').addEventListener('click', () => {
+            ipcRenderer.send('window-minimize');
+        });
+
+        document.getElementById('closeBtn').addEventListener('click', () => {
+            ipcRenderer.send('window-close');
+        });
+    </script>
+</body>
+</html>
