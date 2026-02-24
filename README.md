@@ -5,14 +5,14 @@ A cute cat-themed slot machine game built with Electron. Spin the reels, match c
 <img width="350" alt="image" src="https://github.com/user-attachments/assets/767bb3ed-5a33-431a-8500-c1c65e4fb4d0" />
 
 
-## 🎮 How to Play
+## How to Play
 
 - Click the spin button (costs 5 coins)
 - Match 3 identical cats to win prizes
 - Start with 100 coins
 - Machine face shows your luck!
 
-## 🏆 Prizes
+## Prizes
 
 | 3 Cats Match | Prize |
 |--------------|-------|
@@ -20,7 +20,7 @@ A cute cat-themed slot machine game built with Electron. Spin the reels, match c
 | Orange Cat  | +15 coins |
 | Rainbow Cat  | +50 coins (JACKPOT!) |
 
-## ✨ Features
+## Features
 
 - Custom window controls (minimize/close)
 - Animated spinning reels
@@ -28,13 +28,13 @@ A cute cat-themed slot machine game built with Electron. Spin the reels, match c
 - Confetti celebration on wins
 - 2-minute timeout when you run out of coins
 
-## 🛠️ Built With
+## Built With
 
 - [Electron](https://www.electronjs.org/) - Desktop app framework
 - HTML/CSS/JavaScript - Game logic
 - Canvas Confetti - Celebration effects
 
-## 🚀 How to Run
+## How to Run
 
 ```bash
 # Clone the repo
